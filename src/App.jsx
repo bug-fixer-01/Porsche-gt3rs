@@ -1,11 +1,12 @@
+import Details from "./component/Details"
 import Hero from "./component/Hero"
 
 
 const App = () => {
   return (
    <main>
-    {/* <Navbar/> */}
     <Hero/>
+    <Details/>
    </main>
   )
 }
