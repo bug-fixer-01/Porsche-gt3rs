@@ -4,17 +4,19 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
 const Navbar = () => {
-    useGSAP(()=>{
-      gsap.from("#nav" ,{y:-50 , delay:1 , duration:2 , ease:"power4.out"})
-    })
+  useGSAP(() => {
+    gsap.from("#nav", { y: -50, delay: 1, duration: 2, ease: "power4.out" })
+  })
 
   return (
     <header id="nav" className='w-full py-5 px-15  flex items-center absolute'>
       <nav className='flex w-full '>
         <div className='flex-center max-sm:hidden'>
           {navLists.map((nav) => (
-            <div key={nav} className='px-5'>
-              {nav}
+            <div key={nav} className='mx-5 cursor-pointer relative group'>
+              <span className='text-lg'>{nav}</span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black transform scale-x-0 origin-center transition-transform duration-300 ease-in-out group-hover:scale-x-110"></span>
+
             </div>
           ))}
         </div>

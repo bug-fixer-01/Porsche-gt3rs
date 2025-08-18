@@ -11,7 +11,7 @@ const Details = () => {
     })
 
     return (
-        <section className='h-screen sm:px-20 px-6 py-10 relative overflow-hidden'>
+        <section className='h-screen sm:px-20 px-6 py-10 relative overflow-y-hidden'>
             <div id='details' className='flex justify-between items-center'>
                 <div className='px-4 py-1 font-bold font-details border-2 rounded-3xl'>
                     UPDATES
@@ -44,8 +44,8 @@ const Details = () => {
                     </div>
                 </div>
                 <div id='image' className=' 2xl:pl-34 2xl:pb-5 max-xl:hidden opacity-100'>
-                    <div className="bg-[url('/img/details.jpg')] bg-center bg-cover h-full overflow-hidden rounded-xl relative ">
-                        <div className='w-auto flex flex-col gap-5 backdrop-blur-lg bg-black/15 absolute bottom-3 p-2 rounded-xl inset-x-5'>
+                    <div className="bg-[url('/img/details2.jpg')]  bg-cover h-full overflow-hidden rounded-xl relative ">
+                        <div className='w-56 flex flex-col gap-5 backdrop-blur-lg bg-white/15 absolute bottom-3 p-2 rounded-xl inset-x-5'>
                             <p className='text-white font-medium'>"With its mulitple of sporty design features and technical details - <span className='font-thin text-sm'>911 GT3 RS is perfectly matched to its motorized role models</span></p>
                             <span className='font-semibold text-white font-details'>- Oliver Blume</span>
                         </div>

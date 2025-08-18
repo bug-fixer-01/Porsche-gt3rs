@@ -6,7 +6,7 @@ const Specs = ({specs}) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div id="specs" key={specs.id}>
-            <div className='flex  items-center justify-between py-7'>
+            <div className='flex items-center justify-between py-7'>
                 <div className='flex-center 2xl:gap-[10rem]'>
                     <span className=''>{specs.id}</span>
                     <span className='text-xl 2xl:text-5xl'>{specs.spec}</span>
@@ -17,8 +17,8 @@ const Specs = ({specs}) => {
                     {isOpen ? <IoMdClose className='text-xl'/> : <LuArrowDownRight />}
                 </div>
             </div>
-            <div className={`${isOpen ? "max-h-[30rem]" : "max-h-0 "} flex-center overflow-hidden duration-300 transition-all ease-in-out`}>
-                <img src={specs.img} alt="car" />
+            <div className={`${isOpen ? "max-h-[40rem]" : "max-h-0 "} flex-center overflow-hidden duration-300 transition-all ease-in-out`}>
+                <img src={specs.img} alt="car" className='select-none object-cover'/>
             </div>
             <hr />
         </div>
