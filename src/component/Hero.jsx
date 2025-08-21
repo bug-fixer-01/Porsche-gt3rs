@@ -6,15 +6,15 @@ import gsap from 'gsap'
 
 const Hero = () => {
   useGSAP(()=>{
-    const tl = gsap.timeline()
-    const titleSplit = SplitText.create('#heading',{type:"words"})
-    tl.from(titleSplit.words,{y:150 , duration:2 ,opacity:0, ease:"expo.out"})
-      .from("#hero-footer",{y:100, opacity:0, duration:2 , stagger:0.1 ,ease:"expo.out"},"-=1.5")
+    
+    const heroSplit = SplitText.create("#hero-footer",{type:"lines"})
+    gsap.from("#heading",{y:150 ,delay:2, duration:1.6 ,opacity:0, ease:"expo.out"})
+    gsap.from(heroSplit.lines,{y:100, opacity:0, duration:2 , stagger:0.05 ,ease:"expo.out"}  )
   
   })
 
   return (
-    <section className="bg-[url('/img/section2.jpg')] bg-cover h-screen relative overflow-y-hidden" >
+    <section id='Hero' className="bg-[url('/img/section2.jpg')] bg-cover h-screen relative overflow-y-hidden" >
        <Navbar/>
        <div className='flex flex-col justify-between py-10 h-full sm:px-10 px-5'>
         <div className='mt-15'>

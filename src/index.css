@@ -10,6 +10,9 @@
   --font-hello: "Michroma", sans-serif;
   --font-details:"Nata Sans", sans-serif
 }
+body{
+  font-family: "Nata Sans"
+}
 
 
 @font-face {
@@ -17,8 +20,9 @@
   src: url('/fonts/porsche regular.woff') format('woff');
 }
 
-
-
 @utility flex-center {
   @apply flex items-center justify-center
+}
+@utility image-carousel {
+  @apply relative sm:w-[45vw] w-[88vw] md:h-[80vh] sm:h-[50vh] h-[65vh]
 }

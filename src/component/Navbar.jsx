@@ -2,8 +2,10 @@ import React from 'react'
 import { navLists } from '../constants'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { scrollToSection } from '../helper'
 
 const Navbar = () => {
+
   useGSAP(() => {
     gsap.from("#nav", { y: -50, delay: 1, duration: 2, ease: "power4.out" })
   })
@@ -13,10 +15,9 @@ const Navbar = () => {
       <nav className='flex w-full '>
         <div className='flex-center max-sm:hidden'>
           {navLists.map((nav) => (
-            <div key={nav} className='mx-5 cursor-pointer relative group'>
-              <span className='text-lg'>{nav}</span>
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black transform scale-x-0 origin-center transition-transform duration-300 ease-in-out group-hover:scale-x-110"></span>
-
+            <div key={nav.id} onClick={()=> scrollToSection(nav.id)} className='mx-5 cursor-pointer relative group'>
+              <span className='text-lg'>{nav.name}</span>
+              <span className="absolute bottom-0 left-0 w-full h-[1.2px] bg-black/55 transform scale-x-0 origin-center transition-transform duration-300 ease-in-out group-hover:scale-x-110"></span>
             </div>
           ))}
         </div>
@@ -28,7 +29,7 @@ const Navbar = () => {
           <div className={` cursor-pointer p-2 px-4 rounded-3xl `}>
             Contact
           </div>
-          <div className={`bg-white/15 border-white/20 border-[1px] cursor-pointer p-2 px-4 rounded-3xl `}>
+          <div onClick={() => scrollToSection('footer')} className={`bg-white/15 border-white/20 border-[1px] cursor-pointer p-2 px-4 rounded-3xl `}>
             Subscribe
           </div>
         </div>

@@ -6,12 +6,12 @@ import gsap from 'gsap';
 
 const Details = () => {
     useGSAP(() => {
-        gsap.from("#details", { y: 100, opacity: 0, duration: 0.5, delay:0.5, scrollTrigger: { trigger: '#details' },stagger:0.1, ease: "power1.out" })
-        gsap.from("#image",{y:600 , duration:2 , delay:0.4, opacity:0.1, scrollTrigger:{ trigger:'#details'},ease:"expo.out"})
+        gsap.from("#details", { y: 100, opacity: 0, duration: 0.5,delay:0.4, scrollTrigger: { trigger: '#detail' },stagger:0.2, ease: "power1.out" })
+        gsap.from("#image",{y:600 , duration:2 ,delay:0.3 , opacity:0.1, scrollTrigger:{ trigger:'#details'},ease:"expo.out"})
     })
 
     return (
-        <section className='h-screen sm:px-20 px-6 py-10 relative overflow-y-hidden'>
+        <section id='detail' className='h-screen mb-10 sm:px-20 px-6 py-10 relative overflow-y-hidden'>
             <div id='details' className='flex justify-between items-center'>
                 <div className='px-4 py-1 font-bold font-details border-2 rounded-3xl'>
                     UPDATES
