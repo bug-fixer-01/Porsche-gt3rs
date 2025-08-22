@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <footer id='footer' className='h-full relative overflow-hidden'>
 
-      <span className='absolute -z-10 text-zinc-200 h-full w-full text-center bg-zinc-100 font-semibold text-[15rem] sm:text-[20rem]'>GT 3 RS</span>
+      <span className='absolute -z-10 text-zinc-200 h-full w-full text-center bg-zinc-100 font-semibold text-[10rem] sm:text-[20rem]'>GT 3 RS</span>
 
       <div className='px-10 pt-10 pb-5'>
         <div className='grid sm:grid-cols-2 mb-20'>

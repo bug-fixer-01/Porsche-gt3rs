@@ -53,17 +53,17 @@ const Gallery = () => {
               ></div>
               <div className="absolute right-0 bottom-0 w-full sm:px-10 px-3 h-1/3 bg-gradient-to-t from-black to-transparent rounded-b-xl text-white flex flex-col justify-center gap-4 items-start">
                 <h1 className="text-3xl max-sm:text-lg font-semibold">{list.tag}</h1>
-                <span className="sm:text-sm sm:w-[90%] sm:block hidden">{list.heading}</span>
+                <span className="sm:text-sm sm:w-[90%] text-xs">{list.heading}</span>
               </div>
             </div>
           </div>
         ))}
       </motion.div>
 
-        
+
 
       {/* Navigation Controls */}
-      <div className="flex justify-end gap-10 mt-5">
+      <div className="flex justify-center gap-10 mt-5">
         <button
           onClick={() => setVideo(videoId - 1)}
           disabled={videoId === 0}
