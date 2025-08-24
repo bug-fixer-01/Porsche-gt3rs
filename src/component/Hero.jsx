@@ -9,7 +9,7 @@ const Hero = () => {
     
     const heroSplit = SplitText.create("#hero-footer",{type:"lines"})
     gsap.from("#heading",{y:150 ,delay:2, duration:1.6 ,opacity:0, ease:"expo.out"})
-    gsap.from(heroSplit.lines,{y:100, opacity:0, duration:2 , stagger:0.05 ,ease:"expo.out"}  )
+    gsap.from(heroSplit.lines,{y:100, opacity:0, duration:2 ,delay:0.5 , stagger:0.2 ,ease:"expo.out"}  )
   
   })
 
