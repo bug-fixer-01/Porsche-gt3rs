@@ -18,6 +18,7 @@ body{
 @font-face {
   font-family: 'porsche';
   src: url('/fonts/porsche regular.woff') format('woff');
+  font-display: swap;
 }
 
 @utility flex-center {

@@ -21,7 +21,8 @@ const Loader = () => {
 };
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+ const [loading, setLoading] = useState(true);
+  const [animateHero, setAnimateHero] = useState(false);
 
   useEffect(() => {
     const images = Array.from(document.images);
@@ -31,22 +32,22 @@ const App = () => {
           if (img.complete) resolve();
           else {
             img.onload = resolve;
-            img.onerror = resolve; // Prevent hang on broken images
+            img.onerror = resolve;
           }
         })
     );
 
-    const fontPromise = document.fonts.ready;
-
-    Promise.all([...imagePromises, fontPromise]).then(() => {
+    Promise.all([...imagePromises, document.fonts.ready]).then(() => {
       setLoading(false);
+      setTimeout(() => setAnimateHero(true), 300); // delay for loader fade
     });
   }, []);
+
 
   return (
    <main>
     {loading && <Loader />}
-    <Hero/>
+    <Hero animate={animateHero}/>
     <Details/>
     <Specification/>
     <Gallery/>

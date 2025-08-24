@@ -6,15 +6,15 @@ export const socials = ["Website","Facebook","Instagram","Twitter",]
 export const specLists = [{
     id:"01",
     spec:"Aerodynamic and Design",
-    img:"/img/aerodynamic.jpg"
+    img:"/img/aerodynamic.avif"
 },{
     id:"02",
     spec:"Lighweight construction",
-    img:"/img/lightweight.jpg"
+    img:"/img/lightweight.avif"
 },{
     id:"03",
     spec:"Engine Performance",
-    img:"/img/power.jpg"
+    img:"/img/power.avif"
     
 },{
     id:"04",
@@ -27,7 +27,7 @@ export const imgLists = [
      tag:"Vehicle concept",   
      heading:"The road-approved high-performance 911 GT3 RS sports car shows off its full potential on the race track. With a high-speed naturally aspirated engine, radical downforce and comprehensive lightweight construction."  
     },
-    {img:"/img/gallery/gallery2.jpg",
+    {img:"/img/gallery/gallery2.avif",
      tag:"Aerodynamics",   
      heading: "Porsche Active Aerodynamics (PAA) continuously adjusts the downforce based on all car data. On straights, the Drag Reduction System (DRS) reduces drag."  
     },
