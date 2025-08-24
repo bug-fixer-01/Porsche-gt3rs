@@ -11,7 +11,8 @@
   --font-details:"Nata Sans", sans-serif
 }
 body{
-  font-family: "Nata Sans"
+  font-family: "Nata Sans";
+  font-display: swap;
 }
 
 
