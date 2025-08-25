@@ -7,7 +7,7 @@ import { scrollToSection } from '../helper'
 const Navbar = () => {
 
   useGSAP(() => {
-    gsap.from("#nav", { y: -60, delay: 1.5, duration: 1.5, ease: "power4.out" })
+    gsap.from("#nav", { y: -60, delay: 0.5, duration: 1.5, ease: "power4.out" })
   })
 
   return (

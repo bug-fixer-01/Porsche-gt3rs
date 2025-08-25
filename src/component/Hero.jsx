@@ -5,8 +5,8 @@ import { gsap } from 'gsap'
 const Hero = ({ animate }) => {
   useGSAP(() => {
     if (animate) {
-      gsap.to("#heading", { delay: 2, duration: 2, opacity: 1, ease: "expo.out" })
-      gsap.to("#hero-footer", { opacity: 1, duration: 2, delay: 2.5 , ease: "expo.out" })
+      gsap.to("#heading", { delay: 1, duration: 2, opacity: 1, ease: "expo.out" })
+      gsap.to("#hero-footer", { opacity: 1, duration: 2, delay: 1.5 , ease: "expo.out" })
     }
   }, [animate])
 
